@@ -8,7 +8,7 @@ Promise.promisifyAll(Poloniex.prototype, {
 	}
 });
 
-const HOURS_PER_PERIOD = 8;
+const HOURS_PER_PERIOD = 6;
 const POP_THRESHOLDS = [3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7];
 
 //const mode = 'series';
@@ -30,7 +30,7 @@ const timeSeries = [360, 180, 90, 45, 25, 15];
 //const now = Math.floor(new Date(2017,4,6,12,0,0,0).getTime() / 1000);
 //const past = now - (12 * 60 * 60);
 
-const startDate = Math.floor(new Date(2017,4,16,12,0,0,0).getTime() / 1000);
+const startDate = Math.floor(new Date(2017,4,19,12,0,0,0).getTime() / 1000);
 const nowDate = Math.floor(new Date().getTime() / 1000);
 const timeSpans = (HOURS_PER_PERIOD * 60 * 60);
 const INCREMENTS = 14400;
@@ -158,7 +158,7 @@ return poloniex.returnTickerAsync()
 				} else {
 					parameters.end = next + timeSpans;
 					parameters.start = next;
-					parameters.period = 14400;
+					parameters.period = 900;
 				}
 				return poloniex._privateAsync('returnChartData', parameters)
 					.then((result) => {

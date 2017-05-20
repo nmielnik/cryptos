@@ -1,0 +1,22 @@
+# this is the top-most EditorConfig file in the current repository.
+# see http://editorconfig.org for usage details and links to plugins for your favorite editor.
+root = true
+
+# "the following base rules affect files of any type in the current repository:"
+#     "the charset is utf-8."
+#     "the end-of-line (EOL) character is a line feed (LF)."
+#     "the indent size of a tab is four spaces."
+#     "the indentation style uses tabs, not spaces."
+#     "the end-of-file (EOF) has a newline character when saved."
+#     "the lines of a file do not have trailing whitespace."
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[package.json]
+indent_style = space
+indent_size = 2

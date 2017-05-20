@@ -1,0 +1,39 @@
+# ##########
+# NOTE - If you update .gitignore, be sure to also update .npmignore if appropriate
+# ##########
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Editor config files
+*.iml
+.idea
+.vimrc
+.*.swp
+.gradle
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# Users Environment Variables
+.lock-wscript
+dev.envrc
+.envrc
+
+# Ignore dist and build directories (target for compiled assets)
+dist
+build
+
+# Ignore api-key.js, this should be created locally by each user
+api-key.js
+
+# Ignore the 'local' directory, so it can be a place to store things locally without git complaining
+local/

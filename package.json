@@ -1,0 +1,29 @@
+{
+  "name": "cryptos",
+  "version": "0.0.0",
+  "description": "Crypto-Currency Expriments",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nmielnik/cryptos"
+  },
+  "author": "Nate Mielnik",
+  "license": "MIT",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "^3.2.2",
+    "moment": "^2.11.2",
+    "stats-lite": "^2.0.4",
+    "simple-statistics": "^1.0.1",
+    "poloniex.js": "0.0.7"
+  },
+  "devDependencies": {
+  },
+  "bugs": {
+    "url": "https://github.com/nmielnik/cryptos/issues"
+  },
+  "homepage": "http://github.com/nmielnik/cryptos"
+}

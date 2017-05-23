@@ -8,6 +8,7 @@
   },
   "author": "Nate Mielnik",
   "license": "MIT",
+  "main": "server.js",
   "browserify": {
     "transform": [
       "babelify"
@@ -15,13 +16,15 @@
   },
   "dependencies": {
     "bluebird": "^3.2.2",
+    "cryptocompare": "^0.1.0",
+    "express": "^4.15.3",
     "moment": "^2.11.2",
-    "stats-lite": "^2.0.4",
+    "node-fetch": "^1.6.3",
+    "poloniex.js": "0.0.7",
     "simple-statistics": "^1.0.1",
-    "poloniex.js": "0.0.7"
+    "stats-lite": "^2.0.4"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/nmielnik/cryptos/issues"
   },

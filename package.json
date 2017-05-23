@@ -21,6 +21,7 @@
     "moment": "^2.11.2",
     "node-fetch": "^1.6.3",
     "poloniex.js": "0.0.7",
+    "prom-client": "^9.0.0",
     "simple-statistics": "^1.0.1",
     "stats-lite": "^2.0.4"
   },

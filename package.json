@@ -20,6 +20,7 @@
     "express": "^4.15.3",
     "moment": "^2.11.2",
     "node-fetch": "^1.6.3",
+    "parse-decimal-number": "^0.1.1",
     "poloniex.js": "0.0.7",
     "prom-client": "^9.0.0",
     "simple-statistics": "^1.0.1",

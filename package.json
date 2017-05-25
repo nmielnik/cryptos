@@ -17,6 +17,7 @@
   "dependencies": {
     "bluebird": "^3.2.2",
     "cryptocompare": "^0.1.0",
+    "elasticsearch": "^13.0.1",
     "express": "^4.15.3",
     "mathjs": "^3.13.2",
     "lodash": "^4.17.4",

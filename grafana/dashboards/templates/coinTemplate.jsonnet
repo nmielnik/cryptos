@@ -1,4 +1,4 @@
-function(id, coinName) {
+function(id, coinName, title) {
           "aliasColors": {},
           "bars": true,
           "dashLength": 10,
@@ -65,7 +65,7 @@ function(id, coinName) {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": coinName,
+          "title": title,
           "tooltip": {
             "shared": true,
             "sort": 0,

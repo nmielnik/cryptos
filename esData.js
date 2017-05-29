@@ -11,22 +11,25 @@ var client = new elasticsearch.Client({
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
 var allCoins = ['BTC', 'ETH', 'LTC', 'ETC', 'EMC', 'PUT', 'XRP', 'XEM', 'XMR']
+// var allCoins = ['ETH']
 allCoins.forEach(getCoinPrices);
 
 function getCoinPrices(coinName) {
 	console.log(coinName);
-	cc.histoMinute(coinName, 'USD', {limit: 1440})
+	// var currency = 'USD';
+	var currency = 'BTC';
+	cc.histoMinute(coinName, currency, {limit: 1440})
 	// cc.histoHour(coinName, 'USD', {limit: 168})
-	// cc.histoDay(coinName, 'USD', {limit: 'none'})
+	// cc.histoDay(coinName, currency, {limit: 'none'})
 		.then(function(data) {
-			processData(coinName, data);
+			processData(coinName, currency, data);
 		})
 		.catch((error) => {
 			console.error(error);
 		});
 }
 
-function processData(coinName, hits) {
+function processData(coinName, currency, hits) {
 	var unit = 500;
 	var results = [];
 	var length = Math.ceil(hits.length / unit);
@@ -41,9 +44,10 @@ function processData(coinName, hits) {
 		hitsArray.forEach(function(hit) {
 			hit.time = hit.time * 1000;
 			hit.coinName = coinName;
+			hit.currency = currency;
 			elasticSearchBody.push({
 				index: {
-					_id: coinName + '-' + hit.time,
+					_id: coinName + '-'  + currency + '-' + hit.time,
 					_index: 'coins',
 					_type: 'price'
 				}
@@ -91,6 +95,9 @@ function executeESBulkQueries(esBulkQueries) {
 //         },
 //         "time": {
 //           "type": "date"
+//         },
+//         "currency": {
+//           "type": "keyword"
 //         }
 //       }
 //     }

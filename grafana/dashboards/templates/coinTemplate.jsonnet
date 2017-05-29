@@ -1,4 +1,4 @@
-function(id, coinName, title) {
+function(id, coinName, title, currency) {
           "aliasColors": {},
           "bars": true,
           "dashLength": 10,
@@ -57,7 +57,7 @@ function(id, coinName, title) {
                   "type": "avg"
                 }
               ],
-              "query": "coinName:\"" + coinName + "\"",
+              "query": "coinName:\"" + coinName + "\" && currency:\"" + currency + "\"",
               "refId": "A",
               "timeField": "time"
             }

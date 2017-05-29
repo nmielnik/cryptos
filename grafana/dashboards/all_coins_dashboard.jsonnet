@@ -1,4 +1,6 @@
 local coinTemplate = import './templates/coinTemplate.jsonnet';
+local coins = import './../../lib/all-coins.json';
+
 {
   "annotations": {
     "list": []
@@ -14,15 +16,8 @@ local coinTemplate = import './templates/coinTemplate.jsonnet';
       "collapse": false,
       "height": 280,
       "panels": [
-        coinTemplate(1, 'BTC', 'BTC - Bitcoin', 'USD'),
-        coinTemplate(2, 'ETH', 'ETH - Ethereum', 'USD'),
-        coinTemplate(3, 'PUT', 'PUT - PutinCoin', 'USD'),
-        coinTemplate(4, 'LTC', 'LTC - Litecoin', 'USD'),
-        coinTemplate(5, 'ETC', 'ETC - Ethereum Classic', 'USD'),
-        coinTemplate(6, 'EMC', 'EMC - Emercoin', 'USD'),
-        coinTemplate(7, 'XRP', 'XRP - Ripple', 'USD'),
-        coinTemplate(8, 'XEM', 'XEM - NEM', 'USD'),
-        coinTemplate(9, 'XMR', 'XMR - Monero', 'USD'),
+        coinTemplate(x, coins[x-1].coin, coins[x-1].name  , 'USD')
+        for x in std.range(1, std.length(coins))
       ],
       "repeat": null,
       "repeatIteration": null,

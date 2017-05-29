@@ -1,0 +1,10 @@
+[	
+	{
+		"coin": "BTC",
+		"name": "BTC - Bitcoin"
+	},
+	{
+		"coin": "ETH",
+		"name": "ETH - Ethereum"
+	}
+]

@@ -10,16 +10,16 @@ var client = new elasticsearch.Client({
 // docker run -d -p 9200:9200 -p 9300:9300 -v ~/esdata:/usr/share/elasticsearch/data --name elasticsearch elasticsearch
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
-var allCoins = ['BTC', 'ETH', 'LTC', 'ETC', 'EMC', 'PUT', 'XRP', 'XEM', 'XMR']
-// var allCoins = ['ETH']
-allCoins.forEach(getCoinPrices);
+var allCoins = require('./lib/all-coins.json');
+allCoins.forEach(function(info){
+	getCoinPrices(info.coin);
+});
 
 function getCoinPrices(coinName) {
 	console.log(coinName);
-	// var currency = 'USD';
-	var currency = 'BTC';
+	var currency = 'USD';
+	// var currency = 'BTC';
 	cc.histoMinute(coinName, currency, {limit: 1440})
-	// cc.histoHour(coinName, 'USD', {limit: 168})
 	// cc.histoDay(coinName, currency, {limit: 'none'})
 		.then(function(data) {
 			processData(coinName, currency, data);

@@ -1,10 +1,22 @@
 [	
 	{
 		"coin": "BTC",
-		"name": "BTC - Bitcoin"
+		"name": "Bitcoin",
+		"currency": "USD"
 	},
 	{
 		"coin": "ETH",
-		"name": "ETH - Ethereum"
+		"name": "Ethereum",
+		"currency": "USD"
+	},
+	{
+		"coin": "ETH",
+		"name": "Ethereum",
+		"currency": "BTC"
+	},
+	{
+		"coin": "PUT",
+		"name": "PutinCoin",
+		"currency": "USD"
 	}
 ]

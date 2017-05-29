@@ -12,12 +12,11 @@ var client = new elasticsearch.Client({
 
 var allCoins = require('./lib/all-coins.json');
 allCoins.forEach(function(info){
-	getCoinPrices(info.coin);
+	getCoinPrices(info.coin, info.currency);
 });
 
-function getCoinPrices(coinName) {
-	console.log(coinName);
-	var currency = 'USD';
+function getCoinPrices(coinName, currency) {
+	console.log(coinName + '/' + currency);
 	// var currency = 'BTC';
 	cc.histoMinute(coinName, currency, {limit: 1440})
 	// cc.histoDay(coinName, currency, {limit: 'none'})

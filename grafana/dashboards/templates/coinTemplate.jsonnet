@@ -65,7 +65,7 @@ function(id, coinName, title, currency) {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": title,
+          "title": coinName + ' - ' + currency + ' - ' + title,
           "tooltip": {
             "shared": true,
             "sort": 0,

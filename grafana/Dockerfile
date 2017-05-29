@@ -8,6 +8,6 @@ COPY grafana.ini /etc/grafana/grafana.ini
 COPY add_datasources.sh add_datasources.sh
 COPY wrapper.sh wrapper.sh
 
-COPY dashboards/. /opt/grafana/data/dashboards/.
+COPY tmp/dashboards/. /opt/grafana/data/dashboards/.
 
 ENTRYPOINT ["/wrapper.sh"]

@@ -10,7 +10,7 @@ var client = new elasticsearch.Client({
 // docker run -d -p 9200:9200 -p 9300:9300 -v ~/esdata:/usr/share/elasticsearch/data --name elasticsearch elasticsearch
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
-var allCoins = ['BTC', 'ETH', 'LTC', 'ETC', 'EMC', 'PUT']
+var allCoins = ['BTC', 'ETH', 'LTC', 'ETC', 'EMC', 'PUT', 'XRP']
 allCoins.forEach(getCoinPrices);
 
 function getCoinPrices(coinName) {

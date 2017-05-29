@@ -1,21 +1,23 @@
 var elasticsearch = require('elasticsearch');
-var allCoins = require('./lib/coin-names').all;
+// var allCoins = require('./lib/coin-names').all;
 global.fetch = require('node-fetch')
 var cc = require('cryptocompare')
 
 var client = new elasticsearch.Client({
-	host: 'localhost:9200',
+	host: 'search-coins-jtghe5d7qp3qk245pxfvez73hi.us-east-1.es.amazonaws.com',
 	log: 'info'
 });
 // docker run -d -p 9200:9200 -p 9300:9300 -v ~/esdata:/usr/share/elasticsearch/data --name elasticsearch elasticsearch
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
-allCoins = ['BTC', 'ETH', 'LTC']
-allCoins.slice(0, 5).forEach(getCoinPrices);
+var allCoins = ['BTC', 'ETH', 'LTC', 'ETC', 'EMC', 'PUT']
+allCoins.forEach(getCoinPrices);
 
 function getCoinPrices(coinName) {
 	console.log(coinName);
-	cc.histoMinute(coinName, 'USD')
+	cc.histoMinute(coinName, 'USD', {limit: 1440})
+	// cc.histoHour(coinName, 'USD', {limit: 168})
+	// cc.histoDay(coinName, 'USD', {limit: 'none'})
 		.then(function(data) {
 			processData(coinName, data);
 		})

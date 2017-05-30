@@ -1,4 +1,5 @@
 var elasticsearch = require('elasticsearch');
+var async = require('async');
 // var allCoins = require('./lib/coin-names').all;
 global.fetch = require('node-fetch')
 var cc = require('cryptocompare')
@@ -11,24 +12,35 @@ var client = new elasticsearch.Client({
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
 var allCoins = require('./lib/all-coins.json');
-allCoins.forEach(function(info){
-	getCoinPrices(info.coin, info.currency);
+var allCoinsData = [];
+allCoins.forEach(function(info) {
+	allCoinsData.push(function(callback) {
+		getCoinPrices(info.coin, info.currency, callback);
+	});
+});
+async.series(allCoinsData, function(err) {
+	if (err) {
+		console.log(err);
+	} else {
+		console.log('DONE');
+	}
 });
 
-function getCoinPrices(coinName, currency) {
+
+function getCoinPrices(coinName, currency, callback) {
 	console.log(coinName + '/' + currency);
-	// var currency = 'BTC';
 	cc.histoMinute(coinName, currency, {limit: 1440})
-	// cc.histoDay(coinName, currency, {limit: 'none'})
+		// cc.histoDay(coinName, currency, {limit: 'none'})
 		.then(function(data) {
-			processData(coinName, currency, data);
+			processData(coinName, currency, data, callback);
 		})
 		.catch((error) => {
 			console.error(error);
+			callback(error);
 		});
 }
 
-function processData(coinName, currency, hits) {
+function processData(coinName, currency, hits, callback) {
 	var unit = 500;
 	var results = [];
 	var length = Math.ceil(hits.length / unit);
@@ -38,41 +50,33 @@ function processData(coinName, currency, hits) {
 	}
 
 	var esBulkQueries = [];
+	var elasticSearchBody = [];
 	results.forEach(function(hitsArray) {
-		var elasticSearchBody = [];
+
 		hitsArray.forEach(function(hit) {
 			hit.time = hit.time * 1000;
 			hit.coinName = coinName;
 			hit.currency = currency;
 			elasticSearchBody.push({
 				index: {
-					_id: coinName + '-'  + currency + '-' + hit.time,
+					_id: coinName + '-' + currency + '-' + hit.time,
 					_index: 'coins',
 					_type: 'price'
 				}
 			});
 			elasticSearchBody.push(hit);
 		});
-		esBulkQueries.push({
-			body: elasticSearchBody
-		});
 	});
 
-	executeESBulkQueries(esBulkQueries);;
-}
-
-function executeESBulkQueries(esBulkQueries) {
-	var chunkSize = parseInt(5, 10);
-	var chunks = [];
-	for (var i = 0, j = esBulkQueries.length; i < j; i += chunkSize) {
-		chunks.push(esBulkQueries.slice(i, i + chunkSize));
-	}
-	var results = [];
-	for (var i = 0; i < chunks.length; i++) {
-		var res = Promise.all(chunks[i].map(bulkQuery => client.bulk(bulkQuery)));
-		results = results.concat(res);
-	}
-	return results;
+	client.bulk({
+			body: elasticSearchBody
+		})
+		.then(function() {
+			callback();
+		})
+		.catch(function(err) {
+			callback(err);
+		});
 }
 
 

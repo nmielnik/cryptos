@@ -1,3 +1,3 @@
 #!/bin/bash
-(sleep 20s && /add_datasources.sh) &
+(sleep 15s && /add_datasources.sh) &
 exec /run.sh

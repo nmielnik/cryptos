@@ -2,496 +2,426 @@
 	{
 		"coin": "BTC",
 		"name": "Bitcoin",
-		"currency": "USD"
+		"currencies": ["USD"]
 	},
 	{
 		"coin": "ETH",
 		"name": "Ethereum",
-		"currency": "BTC"
-	},
-	{
-		"coin": "ETH",
-		"name": "Ethereum",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "XRP",
 		"name": "Ripple",
-		"currency": "BTC"
-	},
-	{
-		"coin": "XRP",
-		"name": "Ripple",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "XEM",
 		"name": "NEM",
-		"currency": "BTC"
-	},
-	{
-		"coin": "XEM",
-		"name": "NEM",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "ETC",
 		"name": "Ethereum Classic",
-		"currency": "BTC"
-	},
-	{
-		"coin": "ETC",
-		"name": "Ethereum Classic",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "LTC",
 		"name": "Litecoin",
-		"currency": "BTC"
-	},
-	{
-		"coin": "LTC",
-		"name": "Litecoin",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "DASH",
 		"name": "Digital Cash",
-		"currency": "BTC"
-	},
-	{
-		"coin": "DASH",
-		"name": "Digital Cash",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "XMR",
 		"name": "Monero",
-		"currency": "BTC"
-	},
-	{
-		"coin": "XMR",
-		"name": "Monero",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "BCN",
 		"name": "Bytecoin",
-		"currency": "BTC"
-	},
-	{
-		"coin": "BCN",
-		"name": "Bytecoin",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "GNT",
 		"name": "Golem Network Tokens",
-		"currency": "BTC"
-	},
-	{
-		"coin": "GNT",
-		"name": "Golem Network Tokens",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "STRAT",
 		"name": "Stratis",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "XLM",
 		"name": "Stellar Lumens",
-		"currency": "BTC"
-	},
-	{
-		"coin": "XLM",
-		"name": "Stellar Lumens",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "ZEC",
 		"name": "Zcash",
-		"currency": "BTC"
-	},
-	{
-		"coin": "ZEC",
-		"name": "Zcash",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "DOGE",
 		"name": "Dogecoin",
-		"currency": "BTC"
-	},
-	{
-		"coin": "DOGE",
-		"name": "Dogecoin",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "WAVES",
 		"name": "Waves",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "GNO",
 		"name": "Gnosis",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "REP",
 		"name": "Augur",
-		"currency": "BTC"
-	},
-	{
-		"coin": "REP",
-		"name": "Augur",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	},
 	{
 		"coin": "STEEM",
 		"name": "Steem",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "SC",
 		"name": "Siacoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "GAME",
 		"name": "GameCredits",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "MAID",
 		"name": "MaidSafeCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BTS",
 		"name": "BitShares",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "DGD",
 		"name": "DigixDAO",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "LSK",
 		"name": "Lisk",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "DGB",
 		"name": "DigiByte",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "FCT",
 		"name": "Factom",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BCC",
 		"name": "BitConnect",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "ROUND",
 		"name": "Round",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "DCR",
 		"name": "Decred",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "ICN",
 		"name": "Iconomi",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "SNGLS",
 		"name": "SingularDTV",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "ARDR",
 		"name": "Ardor",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "PIVX",
 		"name": "PIVX",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "GBYTE",
 		"name": "Byteball",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "ANT",
 		"name": "Aragon",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "1ST",
 		"name": "FirstBlood",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "SYS",
 		"name": "SysCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NXT",
 		"name": "Nxt",
-		"currency": "BTC"
-	},
-	{
-		"coin": "NXT",
-		"name": "Nxt",
-		"currency": "USD"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "KMD",
 		"name": "Komodo",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "ANS",
 		"name": "AntShares",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "RLC",
 		"name": "iExec RLC",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "PPC",
 		"name": "Peercoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "MLN",
 		"name": "Melon",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "RDD",
 		"name": "ReddCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "EMC",
 		"name": "Emercoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BTCD",
 		"name": "BitcoinDark",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "SJCX",
 		"name": "Storjcoin X",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "UBQ",
 		"name": "Ubiq",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "WINGS",
 		"name": "Wings",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "XCP",
 		"name": "Counterparty",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NMC",
 		"name": "Namecoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NXS",
 		"name": "Nexus",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "POT",
 		"name": "PotCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "AMP",
 		"name": "Synereo",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NAV",
 		"name": "NAV Coin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BURST",
 		"name": "Burst",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "EXP",
 		"name": "Expanse",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "LBC",
 		"name": "Library Credits",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BLK",
 		"name": "BlackCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "GRC",
 		"name": "GridCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NXC",
 		"name": "Nexium",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "VTC",
 		"name": "Vertcoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "RADS",
 		"name": "Radium",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "OMNI",
 		"name": "Omni",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "CLAM",
 		"name": "Clams",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BCY",
 		"name": "Bitcrystals",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "VRC",
 		"name": "VeriCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "VIA",
 		"name": "Viacoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "FLO",
 		"name": "FlorinCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NOTE",
 		"name": "DNotes",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "PASC",
 		"name": "Pascal Coin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NEOS",
 		"name": "NeosCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BELA",
 		"name": "BelaCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "XBC",
 		"name": "Bitcoin Plus",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "XPM",
 		"name": "Primecoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "EMC2",
 		"name": "Einsteinium",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "BTM",
 		"name": "Bitmark",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "PINK",
 		"name": "PinkCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "XVC",
 		"name": "Vcash",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "FLDC",
 		"name": "FoldingCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "NAUT",
 		"name": "NautilusCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "RIC",
 		"name": "Riecoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "SBD",
 		"name": "Steem Dollars",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "HUC",
 		"name": "HunterCoin",
-		"currency": "BTC"
+		"currencies": ["BTC"]
 	},
 	{
 		"coin": "PUT",
 		"name": "PutinCoin",
-		"currency": "USD"
+		"currencies": ["BTC", "USD"]
 	}
 ]

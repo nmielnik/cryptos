@@ -20,8 +20,8 @@ function(id, coinName, title, currency) {
           "links": [],
           "nullPointMode": "null",
           "percentage": false,
-          "pointradius": 5,
-          "points": false,
+          "pointradius": 2,
+          "points": true,
           "renderer": "flot",
           "seriesOverrides": [
             {
@@ -38,7 +38,7 @@ function(id, coinName, title, currency) {
             }
           ],
           "spaceLength": 10,
-          "span": 6,
+          "span": 4,
           "stack": false,
           "steppedLine": false,
           "targets": [

@@ -16,7 +16,7 @@ function(coins=[], title='') {
       "height": 280,
       "panels": [
         coinTemplate(x, coins[x-1].coin, coins[x-1].name, coins[x-1].currency)
-        for x in std.range(1, std.length(coins)) if coins[x-1].currency == 'BTC' || coins[x-1].name == 'BTC'
+        for x in std.range(1, std.length(coins)) if coins[x-1].currency == 'BTC' || coins[x-1].coin == 'BTC'
       ],
       "repeat": null,
       "repeatIteration": null,

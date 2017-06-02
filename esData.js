@@ -12,6 +12,7 @@ var client = new elasticsearch.Client({
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
 var allCoins = require('./lib/all-coins.json');
+// var allCoins = require('./lib/my_coins.json');
 var allCoinsData = [];
 allCoins.forEach(function(info) {
 	allCoinsData.push(function(callback) {
@@ -32,6 +33,7 @@ function getCoinPrices(coinName, currency, callback) {
 	cc.histoMinute(coinName, currency, {limit: 1440})
 		// cc.histoDay(coinName, currency, {limit: 'none'})
 		.then(function(data) {
+			console.log(data.length);
 			processData(coinName, currency, data, callback);
 		})
 		.catch((error) => {
@@ -41,31 +43,19 @@ function getCoinPrices(coinName, currency, callback) {
 }
 
 function processData(coinName, currency, hits, callback) {
-	var unit = 500;
-	var results = [];
-	var length = Math.ceil(hits.length / unit);
-
-	for (var i = 0; i < length; i++) {
-		results.push(hits.slice(i * unit, (i + 1) * unit));
-	}
-
-	var esBulkQueries = [];
 	var elasticSearchBody = [];
-	results.forEach(function(hitsArray) {
-
-		hitsArray.forEach(function(hit) {
-			hit.time = hit.time * 1000;
-			hit.coinName = coinName;
-			hit.currency = currency;
-			elasticSearchBody.push({
-				index: {
-					_id: coinName + '-' + currency + '-' + hit.time,
-					_index: 'coins',
-					_type: 'price'
-				}
-			});
-			elasticSearchBody.push(hit);
+	hits.forEach(function(hit) {
+		hit.time = hit.time * 1000;
+		hit.coinName = coinName;
+		hit.currency = currency;
+		elasticSearchBody.push({
+			index: {
+				_id: coinName + '-' + currency + '-' + hit.time,
+				_index: 'coins',
+				_type: 'price'
+			}
 		});
+		elasticSearchBody.push(hit);
 	});
 
 	client.bulk({
@@ -98,6 +88,9 @@ function processData(coinName, currency, hits, callback) {
 //         },
 //         "time": {
 //           "type": "date"
+//         },
+//         "coinName": {
+//           "type": "keyword"
 //         },
 //         "currency": {
 //           "type": "keyword"

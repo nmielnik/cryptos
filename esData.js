@@ -14,8 +14,10 @@ var client = new elasticsearch.Client({
 var allCoins = require('./lib/all-coins.json');
 var allCoinsData = [];
 allCoins.forEach(function(info) {
-	allCoinsData.push(function(callback) {
-		getCoinPrices(info.coin, info.currency, callback);
+	info.currencies.forEach(function(currency){
+		allCoinsData.push(function(callback) {
+		getCoinPrices(info.coin, currency, callback);
+		});
 	});
 });
 async.series(allCoinsData, function(err) {

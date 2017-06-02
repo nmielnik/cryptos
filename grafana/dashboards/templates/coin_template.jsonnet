@@ -27,14 +27,6 @@ function(id, coinName, title, currency) {
             {
               "alias": "Average close",
               "color": "#6ED0E0"
-            },
-            {
-              "alias": "BTC",
-              "yaxis": 2
-            },
-            {
-              "alias": "USD",
-              "yaxis": 1
             }
           ],
           "spaceLength": 10,
@@ -43,7 +35,7 @@ function(id, coinName, title, currency) {
           "steppedLine": false,
           "targets": [
             {
-              "alias": "USD",
+              "alias": currency,
               "bucketAggs": [
                 {
                   "field": "time",
@@ -66,35 +58,7 @@ function(id, coinName, title, currency) {
                   "type": "avg"
                 }
               ],
-              "query": "coinName:\"" + coinName + "\" && currency:\"USD\"",
-              "refId": "A",
-              "timeField": "time"
-            },
-            {
-              "alias": "BTC",
-              "bucketAggs": [
-                {
-                  "field": "time",
-                  "id": "3",
-                  "settings": {
-                    "interval": "auto",
-                    "min_doc_count": 0,
-                    "trimEdges": 0
-                  },
-                  "type": "date_histogram"
-                }
-              ],
-              "dsType": "elasticsearch",
-              "metrics": [
-                {
-                  "field": "close",
-                  "id": "5",
-                  "meta": {},
-                  "settings": {},
-                  "type": "avg"
-                }
-              ],
-              "query": "coinName:\"" + coinName + "\" && currency:\"BTC\"",
+              "query": "coinName:\"" + coinName + "\" && currency:\"" + currency + "\"",
               "refId": "A",
               "timeField": "time"
             }

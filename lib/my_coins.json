@@ -1,0 +1,42 @@
+[
+	{
+		"coin": "BTC",
+		"name": "Bitcoin",
+		"currency": "USD"
+	},
+	{
+		"coin": "ETH",
+		"name": "Ethereum",
+		"currency": "BTC"
+	},
+	{
+		"coin": "ETH",
+		"name": "Ethereum",
+		"currency": "USD"
+	},
+	{
+		"coin": "LTC",
+		"name": "Litecoin",
+		"currency": "BTC"
+	},
+	{
+		"coin": "LTC",
+		"name": "Litecoin",
+		"currency": "USD"
+	},
+	{
+		"coin": "DASH",
+		"name": "Digital Cash",
+		"currency": "BTC"
+	},
+	{
+		"coin": "DASH",
+		"name": "Digital Cash",
+		"currency": "USD"
+	},
+	{
+		"coin": "PUT",
+		"name": "PutinCoin",
+		"currency": "USD"
+	}
+]

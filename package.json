@@ -15,15 +15,19 @@
     ]
   },
   "dependencies": {
+    "async": "^2.4.1",
     "bluebird": "^3.2.2",
     "cryptocompare": "^0.1.0",
+    "elasticsearch": "^13.0.1",
     "express": "^4.15.3",
+    "lodash": "^4.17.4",
     "mathjs": "^3.13.2",
     "moment": "^2.11.2",
     "node-fetch": "^1.6.3",
     "parse-decimal-number": "^0.1.1",
     "poloniex.js": "0.0.7",
     "prom-client": "^9.0.0",
+    "rest": "^2.0.0",
     "simple-statistics": "^1.0.1",
     "stats-lite": "^2.0.4"
   },

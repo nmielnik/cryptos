@@ -20,6 +20,7 @@
     "cryptocompare": "^0.1.0",
     "elasticsearch": "^13.0.1",
     "express": "^4.15.3",
+    "gdax": "^0.4.2",
     "lodash": "^4.17.4",
     "mathjs": "^3.13.2",
     "moment": "^2.11.2",

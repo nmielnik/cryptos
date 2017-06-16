@@ -15,13 +15,13 @@ function(id, coinName, title, currency) {
             "total": false,
             "values": false
           },
-          "lines": true,
+          "lines": false,
           "linewidth": 3,
           "links": [],
           "nullPointMode": "null",
           "percentage": false,
-          "pointradius": 5,
-          "points": false,
+          "pointradius": 1,
+          "points": true,
           "renderer": "flot",
           "seriesOverrides": [
             {

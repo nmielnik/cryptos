@@ -11,14 +11,26 @@ var client = new elasticsearch.Client({
 // docker run -d -p 9200:9200 -p 9300:9300 -v ~/esdata:/usr/share/elasticsearch/data --name elasticsearch elasticsearch
 // docker run -d --link elasticsearch:elasticsearch -p 5601:5601 --name kibana kibana
 
-var allCoins = require('./lib/all-coins.json');
+// var allCoins = require('./lib/all-coins.json');
+// var allCoinsData = [];
+// allCoins.forEach(function(info) {
+// 	info.currencies.forEach(function(currency){
+// 		allCoinsData.push(function(callback) {
+// 		getCoinPrices(info.coin, currency, callback);
+// 		});
+// 	});
+// });
+
+var allCoins = require('./lib/top100coins.json');
+// var allCoins = require('./lib/top100-200coins.json');
+// var allCoins = ['ETH'];
 var allCoinsData = [];
-allCoins.forEach(function(info) {
-	info.currencies.forEach(function(currency){
+allCoins.forEach(function(coinName) {
+	// info.currencies.forEach(function(currency){
 		allCoinsData.push(function(callback) {
-		getCoinPrices(info.coin, currency, callback);
+		getCoinPrices(coinName, 'BTC', callback);
 		});
-	});
+	// });
 });
 async.series(allCoinsData, function(err) {
 	if (err) {
@@ -31,14 +43,15 @@ async.series(allCoinsData, function(err) {
 
 function getCoinPrices(coinName, currency, callback) {
 	console.log(coinName + '/' + currency);
-	cc.histoMinute(coinName, currency, {limit: 1440})
+	// cc.histoMinute(coinName, currency, {limit: 1440})
 		// cc.histoDay(coinName, currency, {limit: 'none'})
+		cc.histoHour(coinName, currency, {limit: 2500})
 		.then(function(data) {
 			processData(coinName, currency, data, callback);
 		})
 		.catch((error) => {
 			console.error(error);
-			callback(error);
+			callback();
 		});
 }
 
@@ -56,6 +69,7 @@ function processData(coinName, currency, hits, callback) {
 	results.forEach(function(hitsArray) {
 
 		hitsArray.forEach(function(hit) {
+			// console.log(hit);
 			hit.time = hit.time * 1000;
 			hit.coinName = coinName;
 			hit.currency = currency;

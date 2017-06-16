@@ -65,7 +65,7 @@ function(coins=[], title='') {
                   "field": "time",
                   "id": "2",
                   "settings": {
-                    "interval": "1h",
+                    "interval": "1d",
                     "min_doc_count": 0,
                     "trimEdges": 0
                   },
@@ -145,8 +145,8 @@ function(coins=[], title='') {
       "collapse": false,
       "height": 280,
       "panels": [
-        coinTemplate(x, coins[x-1].coin, coins[x-1].name, 'USD')
-        for x in std.range(1, std.length(coins)) if std.count(coins[x-1].currencies, 'USD') == 1 || coins[x-1].name == 'BTC'
+        #coinTemplate(x, coins[x-1].coin, coins[x-1].name, 'USD')
+        #for x in std.range(1, std.length(coins)) if std.count(coins[x-1].currencies, 'USD') == 1 || coins[x-1].name == 'BTC'
       ],
       "repeat": null,
       "repeatIteration": null,
@@ -159,8 +159,8 @@ function(coins=[], title='') {
       "collapse": false,
       "height": 280,
       "panels": [
-        coinTemplate(x, coins[x-1].coin, coins[x-1].name, 'BTC')
-        for x in std.range(1, std.length(coins)) if std.count(coins[x-1].currencies, 'BTC') == 1 || coins[x-1].name == 'BTC'
+        coinTemplate(x, coins[x-1], coins[x-1], 'BTC')
+        for x in std.range(1, std.length(coins))
       ],
       "repeat": null,
       "repeatIteration": null,

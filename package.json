@@ -15,6 +15,7 @@
     ]
   },
   "dependencies": {
+    "@you21979/bittrex.com": "0.0.4",
     "async": "^2.4.1",
     "bitfinex-api-node": "^1.0.1",
     "bluebird": "^3.2.2",

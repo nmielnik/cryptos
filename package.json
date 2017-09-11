@@ -15,11 +15,17 @@
     ]
   },
   "dependencies": {
+    "@you21979/bittrex.com": "0.0.4",
     "async": "^2.4.1",
+    "bitfinex-api-node": "^1.0.1",
+    "bitstamp-promise": "^1.0.1",
     "bluebird": "^3.2.2",
+    "coinbase": "^2.0.6",
     "cryptocompare": "^0.1.0",
+    "csv-parser": "^1.11.0",
     "elasticsearch": "^13.0.1",
     "express": "^4.15.3",
+    "gdax": "^0.4.2",
     "lodash": "^4.17.4",
     "mathjs": "^3.13.2",
     "moment": "^2.11.2",
@@ -28,6 +34,7 @@
     "poloniex.js": "0.0.7",
     "prom-client": "^9.0.0",
     "request": "^2.81.0",
+    "request-promise": "^4.2.1",
     "rest": "^2.0.0",
     "simple-statistics": "^1.0.1",
     "stats-lite": "^2.0.4"

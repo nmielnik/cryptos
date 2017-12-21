@@ -1,5 +1,5 @@
 module.exports = {
-	totalInvestmentSize: 0.01,
+	totalInvestmentSize: 0.02,
 	maxCoins: 10,
 	targetGrowth: 3,
 	thresholdPct: 10,

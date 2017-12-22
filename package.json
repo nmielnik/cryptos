@@ -38,7 +38,8 @@
     "request-promise": "^4.2.1",
     "rest": "^2.0.0",
     "simple-statistics": "^1.0.1",
-    "stats-lite": "^2.0.4"
+    "stats-lite": "^2.0.4",
+    "winston": "^2.4.0"
   },
   "devDependencies": {},
   "bugs": {

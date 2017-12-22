@@ -73,3 +73,15 @@ node query.js
 ```
 
 It should dump out something assuming you got everything configured right
+
+ OR
+
+ Run the shitty trading bot. Make sure that trade-rules.js is properly configured
+
+
+```bash
+npm start
+```
+
+
+

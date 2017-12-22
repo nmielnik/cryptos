@@ -29,6 +29,7 @@
     "lodash": "^4.17.4",
     "mathjs": "^3.13.2",
     "moment": "^2.11.2",
+    "node-bittrex-api": "^0.8.1",
     "node-fetch": "^1.6.3",
     "parse-decimal-number": "^0.1.1",
     "poloniex.js": "0.0.7",
@@ -37,11 +38,15 @@
     "request-promise": "^4.2.1",
     "rest": "^2.0.0",
     "simple-statistics": "^1.0.1",
-    "stats-lite": "^2.0.4"
+    "stats-lite": "^2.0.4",
+    "winston": "^2.4.0"
   },
   "devDependencies": {},
   "bugs": {
     "url": "https://github.com/nmielnik/cryptos/issues"
+  },
+  "scripts": {
+    "start": "node ./lib/trade-bittrex.js"
   },
   "homepage": "http://github.com/nmielnik/cryptos"
 }

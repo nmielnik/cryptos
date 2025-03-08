@@ -3,14 +3,16 @@ const cc = require('cryptocompare');
 
 const help = require('./lib/helpers');
 
-const btcHistoryFile = './lib/prices/btcusd-history.json';
-const ethHistoryFile = './lib/prices/ethusd-history.json';
-const bnbHistoryFile = './lib/prices/bnbusd-history.json';
+const historyFiles = {
+	'BTC': './lib/prices/btcusd-history.json',
+	'ETH': './lib/prices/ethusd-history.json',
+	'BNB': './lib/prices/bnbusd-history.json'
+};
 
 const hourLimit = 1344;
 
-const targetHistoryFile = bnbHistoryFile;
-const targetCurrency = 'BNB';
+const targetCurrency = 'BTC';
+const targetHistoryFile = historyFiles[targetCurrency];
 
 const getCoinPrices = (coinName, currency, endDate, existingData, limit, outputFile) => {
 	const keys = {};

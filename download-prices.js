@@ -11,7 +11,7 @@ const historyFiles = {
 
 const hourLimit = 1344;
 
-const targetCurrency = 'BTC';
+const targetCurrency = 'ETH';
 const targetHistoryFile = historyFiles[targetCurrency];
 
 const getCoinPrices = (coinName, currency, endDate, existingData, limit, outputFile) => {

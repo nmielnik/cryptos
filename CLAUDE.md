@@ -1,8 +1,5 @@
 # CLAUDE.md
 
-## coordn8 status node
-Your coordn8 status node is `~/coordn8/nodes/cryptos.md`. Read it at session start; triage its `## Inbound`; keep status current; log meaningful work to `~/coordn8/events/cryptos.md`; commit & push coordn8 when you change it. The shared skills `/coordn8-refresh` and `/coordn8-update` automate this. Contract: coordn8's `agents/self-managing-node.md`.
-
 ## Project
 Crypto tax capital gains calculator. Aggregates transactions from multiple exchanges per year and computes gains/losses.
 
